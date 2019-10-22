@@ -1,0 +1,22 @@
+<!-- Author: jm114 -->
+<main *ngIf="orders != null && currentCurrency != null && currentLanguage != null">
+  <app-h1-text [data]="headlineText_11"></app-h1-text>
+  <app-teaser-bg-image [data]="image_12"></app-teaser-bg-image>
+
+  <section class="wide-wrapper" *ngFor="let order of orders">
+    <div class="list-head">
+      <span>ID: <em>{{order.orderId}}</em></span>
+      <span>Menge</span>
+      <span>Preis</span>
+    </div>
+    <div class="item-list" *ngFor="let item of order.items">
+      <span>{{item.simpleName}}</span>
+      <span>{{item.sizeSquareKm}} KM²</span>
+      <span>{{item.totalPrice | currency : order.currency : 'symbol' : '1.2-2' : currentLanguage.langCode}}</span>
+    </div>
+    <div class="list-foot">
+      <span class="total_price">{{order.totalPrice | currency : order.currency : 'symbol' : '1.2-2' : currentLanguage.langCode}}</span>
+    </div>
+  </section>
+  <app-no-items-added-to-order *ngIf="orders.length <= 0" [data]="headlineText_17"></app-no-items-added-to-order>
+</main>

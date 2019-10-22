@@ -1,0 +1,42 @@
+/* Author: mk303 */
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/shadows";
+@import "~src/assets/styles/transitions";
+
+.login_logout>div {
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  top: -70px;
+  right: -50px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  text-align: center;
+
+  span {
+    position: absolute;
+    top: 15px;
+    left: -5px;
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: #fff;
+    box-shadow: $nav-icon-shadow;
+    transform: rotate(45deg);
+  @include custom-transition($transition-quick);
+
+  &:first-child {
+     transform: rotate(-45deg);
+   }
+  }
+
+  &:hover {
+    span {
+      background: $primary-blue;
+    }
+  }
+}

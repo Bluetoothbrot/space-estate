@@ -1,0 +1,7 @@
+<!-- Author: mk303 -->
+<main>
+  <app-h1-text [data]="headlineText_5"></app-h1-text>
+  <app-teaser-bg-image [data]="image_8"></app-teaser-bg-image>
+  <app-order-overview *ngIf="shoppingCartSize >= 1" [data]="cartItemList_6"></app-order-overview>
+  <app-no-items-added-to-order *ngIf="shoppingCartSize <= 0" [data]="headlineText_14"></app-no-items-added-to-order>
+</main>

@@ -1,0 +1,41 @@
+﻿Security issues regarding webshop implementation:
+	- SECURED LOGGING
+	- EXCEPTION HANDLING
+	- passwörter hashen (und incl Salt abspeichern)
+	- errors nicht rausgeben -> loggen
+	- SQL injections -> prepared statements
+	- blind sql injections -> siehe folien s.120
+	- secure DB access
+	- XSS prevention -> html entities
+	- HTTPS / SSL / IPSec (sichere Übertragung)
+	- User Authentification
+	- Authorization (who can see what data)
+	- (legal imprint?)
+	- Verzeichnisse nicht sichtbar machen
+	- CORS
+	- Top 10 security issues -> see links in lecture notes
+	- login: don't expose if user or pw was incorrect
+	- schützen der session id in web.xml
+
+	basicAuthentification
+	.htaccess
+
+	Testing in Angular
+	UnitTests
+
+	Netzwerkanalyse/Security mit xnmap.org
+	-> angzeigte Daten einschränken, Systemversionen, Namen etc (z.B. ServerTokens Prod)
+
+	hashen:
+	PW: admin_pw
+	Salt ist Zufallszahl: 12345
+	-> secured_pw h(12345admin_pw) = 27zdgjw27e2
+
+	in der DB dann oft mit $:
+	user: xyz
+	pw: 12345$27zdgjw27e2
+
+	OWASP -> Dependency Check
+	-> evt OWASP Testing Guide...
+
+CORS: https://www.youtube.com/watch?v=Ka8vG5miErk

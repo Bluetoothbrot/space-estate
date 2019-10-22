@@ -1,0 +1,37 @@
+/* Author: mk303 */
+
+@import "~src/assets/styles/colors";
+@import "~src/assets/styles/shadows";
+@import "~src/assets/styles/transitions";
+@import "~src/assets/styles/text";
+
+.nav-text-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+
+  span {
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "Roboto Light";
+    cursor: pointer;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: $nav-text-switch-shadow;
+    @include custom-transition($transition-quick);
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      color: $primary-blue;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    &:first-child {
+      text-align: right;
+    }
+  }
+}

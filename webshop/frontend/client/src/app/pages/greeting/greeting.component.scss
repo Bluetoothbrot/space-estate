@@ -1,0 +1,10 @@
+/* Author: mk303 */
+@import "../../../assets/styles/global";
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  height: calc(100vh - #{$footer-height});
+}

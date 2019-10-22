@@ -1,0 +1,20 @@
+<!-- Author: mk303, jm114 -->
+<div class="login_logout overlay" [ngClass]="{'active': loginPanelOpened}" *ngIf="loaded && data != null">
+  <div class="narrow-wrapper">
+    <h2>{{data.headline}}</h2>
+    <form id="loginForm" name="loginForm">
+      <div class="input">
+        <input type="text" #username placeholder="{{data.username}}"/>
+      </div>
+      <div class="input">
+        <input type="password" #password placeholder="{{data.password}}" [ngClass]="credentials"/>
+      </div>
+      <app-button (click)="login()" [buttonText]="data.buttonText"></app-button>
+    </form>
+    <div class="close-icon" (click)="toggleLoginPanel();">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <img src="assets/images/logo.svg" />
+</div>

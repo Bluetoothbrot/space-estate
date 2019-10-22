@@ -1,0 +1,5 @@
+<!-- Author: mk303 -->
+<section *ngIf="data != null" class="wide-wrapper">
+  <p>{{data.headline}}</p>
+  <app-button routerLink="/products" [buttonText]="data.text"></app-button>
+</section>

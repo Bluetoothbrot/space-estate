@@ -1,0 +1,30 @@
+/* Author: mk303 */
+@import "~src/assets/styles/header-icon";
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/colors";
+
+#shopping-cart {
+  margin-left: -7px;
+  svg {
+    position: relative;
+    width: 34px;
+    z-index: 200;
+  }
+}
+
+.shoppingCartSizeIndicator {
+  font-family: "Exo Light";
+  font-size: 12px;
+  line-height: 19px;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: rgba($primary-blue,0.25);
+  border: 1px solid $primary-blue;
+  position: absolute;
+  top: -5px;
+  right: 4px;
+  z-index: 100;
+  border-radius: 10px;
+  z-index: 100;
+}

@@ -1,0 +1,74 @@
+/* Author: jm114, mk303 */
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/text";
+@import "../../../assets/styles/wrappers";
+
+section {
+  padding-bottom: 60px;
+
+  span {
+    font-family: 'Roboto Light';
+    font-size: 12px;
+    line-height: 12px;
+    color: $text-color-white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    justify-content: start;
+
+    em {
+      font-family: 'Roboto Bold';
+      color: $primary-blue;
+    }
+  }
+
+  .item-list {
+    padding: 4px 0;
+  }
+
+  span:last-child {
+    justify-self: end;
+  }
+
+  .total_price {
+    color: $primary-blue;
+    font-family: "Exo Bold";
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.list-head {
+  display: grid;
+  grid-template-columns: 6fr 2fr 3fr;
+  border-bottom: 1px solid $medium-grey;
+  padding-bottom: 11px;
+  margin-bottom: 30px;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: 6fr 2fr 3fr;
+  grid-row-gap: 10px;
+}
+
+.list-foot {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rowa: auto auto;
+  grid-row-gap: 20px;
+  border-top: 1px solid $medium-grey;
+  padding-top: 20px;
+  margin-top: 30px;
+  justify-content: end;
+
+  div {
+    text-align: right;
+    display: inline-block;
+    border-bottom: 1px solid $medium-grey;
+
+    span:last-child {
+      margin-left: 40px;
+    }
+  }
+}

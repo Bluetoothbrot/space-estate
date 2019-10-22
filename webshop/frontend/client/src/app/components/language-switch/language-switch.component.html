@@ -1,0 +1,4 @@
+<!-- Author: mk303 -->
+<div *ngIf="languages?.length > 0 && currentLang != null" class="nav-text-switch">
+  <span *ngFor="let lang of languages index as i" [ngClass]="{'active': currentLang.langCode == lang.langCode}" (click)="switchLang(i)">{{lang.langCode}}</span>
+</div>

@@ -1,0 +1,9 @@
+<!-- Author: mk303 -->
+<div class="top_panel" *ngIf="messageService.message != null"
+     [@openClose]="messageService.show ? 'openState' : 'closedState'"
+     [ngClass]="{
+     'success': messageLevel.Success == messageService.messageLevel,
+     'info':    messageLevel.Info == messageService.messageLevel,
+     'error':   messageLevel.Error == messageService.messageLevel}">
+  <span>{{messageService.message}}</span>
+</div>

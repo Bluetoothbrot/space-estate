@@ -1,0 +1,12 @@
+<!-- Author: mk303, jm114 -->
+<div class="item" *ngIf="planet != null && currentCurrency != null && currentLanguage != null">
+  <a routerLink="/product/{{planet.simpleName}}">
+  <div class="container">
+    <h1 class="title">{{planet.name}}</h1>
+    <p>{{planet.priceSquareKm | currency : currentCurrency.code : 'symbol' : '1.2-2' : currentLanguage.langCode}} / km²</p>
+    <span *ngIf="staticStrings != null">{{staticStrings.PRODUCT_HOVER_FIND_OUT_MORE}}</span>
+  </div>
+  <div class="hover_overlay"></div>
+  <img src="{{planet.image}}">
+  </a>
+</div>

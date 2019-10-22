@@ -1,0 +1,31 @@
+/* Author: mk303 */
+$wrapper-padding: 40px;
+
+%wrapper-base {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $wrapper-padding;
+  padding-right: $wrapper-padding;
+  max-width: 1440px;
+  position: relative;
+}
+
+.max-wrapper {
+  @extend %wrapper-base;
+  max-width: none;
+}
+
+.wide-wrapper {
+  @extend %wrapper-base;
+  max-width: 1110px + (2*$wrapper-padding);
+}
+
+.medium-wrapper {
+  @extend %wrapper-base;
+  max-width: 800px + (2*$wrapper-padding);
+}
+
+.narrow-wrapper {
+  @extend %wrapper-base;
+  max-width: 600px + (2*$wrapper-padding);
+}

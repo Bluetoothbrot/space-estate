@@ -1,0 +1,15 @@
+/* Author: mk303 */
+@import "~src/assets/styles/overlay";
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/login_logout";
+@import "~src/assets/styles/wrappers";
+
+.logout_content {
+  text-align: center;
+
+  ::ng-deep button {
+    width: 100% !important;
+    margin-top: 25px;
+  }
+
+}

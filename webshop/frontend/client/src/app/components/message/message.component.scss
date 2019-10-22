@@ -1,0 +1,60 @@
+/* Author: mk303 */
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/transitions";
+
+.top_panel {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(#000, 0.5);
+  @include delayed-transition-timed(all, 0.25s, 0s);
+  padding: 14px 20px;
+  z-index: 1000;
+
+  &.success {
+    background: rgba($secondary-green, 0.5);
+    border: 1px solid $secondary-green;
+    span:before {
+      content: url("../../../assets/images/check.svg");
+    }
+  }
+
+  &.info {
+    background: rgba($secondary-orange, 0.5);
+    border: 1px solid $secondary-orange;
+    span:before {
+      content: url("../../../assets/images/info.svg");
+    }
+  }
+
+  &.error {
+    background: rgba($secondary-red, 0.5);
+    border: 1px solid $secondary-red;
+    span:before {
+      content: url("../../../assets/images/error.svg");
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 26px;
+    font-family: "Exo Bold";
+    color: $text-color-white;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 26px;
+      height: 22px;
+      margin-right: 10px;
+      position: relative;
+      top: 7px;
+    }
+  }
+}

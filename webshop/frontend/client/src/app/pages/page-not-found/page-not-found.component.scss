@@ -1,0 +1,9 @@
+/* Author: mk303 */
+@import "../../../assets/styles/global";
+main {
+  text-align: center;
+
+  ::ng-deep .bg {
+    height: calc(100vh - #{$footer-height});
+  }
+}

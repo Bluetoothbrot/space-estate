@@ -1,0 +1,9 @@
+<!-- Author: mk303 -->
+<app-header></app-header>
+<app-message></app-message>
+<app-login></app-login>
+<app-logout></app-logout>
+<div [@pageTransition]="getRouterOutletState(router_outlet)">
+  <router-outlet #router_outlet="outlet"></router-outlet>
+</div>
+<app-footer></app-footer>

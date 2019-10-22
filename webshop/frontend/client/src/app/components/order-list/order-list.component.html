@@ -1,0 +1,18 @@
+<!-- Author: mk303 -->
+<section *ngIf="data != null && currentCurrency != null && currentLanguage != null" class="wide-wrapper">
+  <div class="list-head">
+    <span>{{data.item}}</span>
+    <span>{{data.amount}}</span>
+    <span>{{data.price}}</span>
+  </div>
+  <div class="item-list">
+    <app-order-list-item *ngFor="let item of shoppingCartItems" [data]="item"></app-order-list-item>
+  </div>
+  <div class="list-foot">
+    <div>
+      <span>{{data.totalPrice}}</span>
+      <span class="total_price">{{totalPrice | currency : currentCurrency.code : "symbol" : "1.2-2" : currentLanguage.langCode}}</span>
+    </div>
+    <app-button [buttonText]="data.buttonText" (click)="submitOrder()"></app-button>
+  </div>
+</section>

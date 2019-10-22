@@ -1,0 +1,19 @@
+<!-- Author: mk303 -->
+<header>
+  <div id="nav-icon" [ngClass]="{'active': menuOpen}" (click)="toggleNavActiveClass();">
+    <div></div>
+    <div></div>
+  </div>
+  <app-shopping-cart-icon></app-shopping-cart-icon>
+  <app-login-toggle></app-login-toggle>
+  <app-language-switch></app-language-switch>
+  <app-currency-switch></app-currency-switch>
+</header>
+<div id="nav" class="overlay" [ngClass]="{'active': menuOpen}">
+  <nav>
+    <ul *ngIf="null != pages">
+      <li *ngFor="let page of pages"><a [routerLink]="page.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ page.title }}</a></li>
+    </ul>
+  </nav>
+  <img src="assets/images/logo.svg" />
+</div>

@@ -1,0 +1,19 @@
+/* Author: mk303 */
+$transition-quick: all 0.15s ease-in-out;
+$transition-medium: all 0.3s ease-in-out;
+$transition-quick-delayed: all 0.15s ease-in-out 0.15s;
+
+@mixin custom-transition($transformation-properties){
+  -webkit-transition: $transformation-properties;
+  -moz-transition: $transformation-properties;
+  -o-transition: $transformation-properties;
+  transition: $transformation-properties;
+}
+
+@mixin delayed-transition-timed($property, $time, $delay) {
+  -webkit-transition: $property $time ease-in-out;
+  -moz-transition: $property $time ease-in-out;
+  -o-transition: $property $time ease-in-out;
+  transition: $property $time ease-in-out;
+  transition-delay: $delay;
+}

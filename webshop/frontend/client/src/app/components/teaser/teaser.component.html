@@ -1,0 +1,18 @@
+<!-- Author: jm114 -->
+<div *ngIf="data != null" class="teaser" [ngStyle]="{ 'background-image': 'url(' + data.image + ')'}">
+  <div class="middle" appParallax [ratio]="0.25">
+    <img class="logo" src="{{data.logo}}">
+    <h2>{{data.headline}}</h2>
+  </div>
+  <div class="arrow shake-vertical">
+    <svg width="9px" height="102px" viewBox="0 0 9 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="homepage" transform="translate(-716.000000, -549.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <g id="Teaser">
+            <path id="Line" d="M720,641.5 L720,549.5 L721,549.5 L721,641.5 L725,641.5 L720.5,650.5 L716,641.5 L720,641.5 Z"></path>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>

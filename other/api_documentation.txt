@@ -1,0 +1,84 @@
+# Author: mk303, om018 #
+
+#############################
+###   API DOCUMENTATION   ###
+#############################
+
+
+### GENERAL #################
+
+/language/{lang-code}
+	| Umstellen der Sprache, die im Backend als Aktiv gilt
+	| Verwendung: *
+
+/currency/{currency-code}
+	| Umstellen der Währung, die im Backend als Aktiv gilt
+	| Verwendung: *
+
+
+### HOME ####################
+
+/getTeaser/{id}
+	| Array von Daten für den Teaser: Logo, Bild, Headline
+	| Verwendung: Home
+
+/getDescriptio/{id}
+	| Array von Daten für den Description: Headline, Text, ButtonText, Bild
+	| Verwendung: Home
+
+/getPromoPlanets/{id}
+	| Array von 2 Planeten, die absichtlich oder zufällig definiert sind.
+	| Verwendung: Home
+
+
+### PRODUCTS OVERVIEW #######
+
+/getHeadlineText/{id}
+	| Array von Daten für eine Überschrift und ein Text
+	| Verwendung: Products Overview
+
+/getPlanets
+	| Array von allen aktive Planeten mit allen relevanten Daten
+	| Verwendung: Products Overview
+
+
+### PRODUCT #################
+
+/getPlanetFormContent
+	| Array von Daten das Fromular, die nicht im
+	| Call '/getPlanet/{id}' abgedecht sind
+	| Verwendung: Product
+
+/getPlanet/{id}
+	| Array von allen Daten eines Planeten
+	| Verwendung: Product
+
+
+### CART ####################
+
+/getHeadlineTextUser/{id}
+	| Array von Daten für eine Überschrift und ein Begrüßungstext + Username
+	| Verwendung: Cart
+
+/getTeaserBgImage/{id}
+	| Array von Daten für eine Hintergrundbild
+	| Verwendung: Cart
+
+
+### IMPRINT #################
+
+/getHeadlineText/{id}
+	| Array von Daten für eine Überschrift und ein Text
+	| Verwendung: Imprint, Products Overview
+
+/getTeaserBgImage/{id}
+	| Array von Daten für eine Hintergrundbild
+	| Verwendung: Imprint, Cart
+
+
+### LOGIN ###################
+
+/getLoginContent
+	| Array von Daten für Formular Überschrift und
+	| Buttontext (+ Placeholdertexte?)
+	| Verwendung: Login

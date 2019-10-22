@@ -1,0 +1,69 @@
+/* Author: mk303 */
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/text";
+@import "../../../assets/styles/wrappers";
+
+section {
+  padding-bottom: 100px;
+
+  span {
+    font-family: 'Roboto Light';
+    font-size: 12px;
+    line-height: 12px;
+    color: $text-color-white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    justify-content: start;
+  }
+
+  span:last-child {
+    justify-self: end;
+  }
+
+  .total_price {
+    color: $primary-blue;
+    font-size: 32px;
+    line-height: 32px;
+    font-family: 'Exo Bold';
+    text-align: right;
+  }
+}
+
+.list-head {
+  display: grid;
+  grid-template-columns: 6fr 2fr 2fr;
+  border-bottom: 1px solid $medium-grey;
+  padding-bottom: 11px;
+  margin-bottom: 30px;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 60px;
+}
+
+.list-foot {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rowa: auto auto;
+  grid-row-gap: 20px;
+  border-top: 1px solid $medium-grey;
+  padding-top: 51px;
+  margin-top: 30px;
+  justify-content: end;
+
+  div {
+    text-align: right;
+    display: inline-block;
+    border-bottom: 1px solid $medium-grey;
+
+    span:last-child {
+      margin-left: 40px;
+    }
+  }
+
+  ::ng-deep button {
+    width: 100% !important;
+  }
+}

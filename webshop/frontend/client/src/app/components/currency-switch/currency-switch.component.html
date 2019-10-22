@@ -1,0 +1,4 @@
+<!-- Author: jm114 -->
+<div *ngIf="currencies?.length > 0 && currentCurr != null" class="nav-text-switch">
+  <span *ngFor="let curr of currencies index as i" [ngClass]="{'active': currentCurr.code == curr.code}" (click)="switchCurr(i)">{{curr.code}}</span>
+</div>

@@ -1,0 +1,13 @@
+<!-- Author: mk303 -->
+<div class="login_logout overlay" [ngClass]="{'active': logoutPanelOpened}" *ngIf="loaded && data != null">
+  <div class="narrow-wrapper logout_content">
+    <h2>{{data.headline}}</h2>
+    <p>{{data.text}}</p>
+    <app-button (click)="logout()" [buttonText]="data.buttonText">Logout</app-button>
+    <div class="close-icon" (click)="toggleLogoutPanel();">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <img src="assets/images/logo.svg" />
+</div>

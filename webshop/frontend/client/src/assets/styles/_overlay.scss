@@ -1,0 +1,39 @@
+@import "~src/assets/styles/transitions";
+
+.overlay {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 1);
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  @include custom-transition($transition-quick);
+
+  img {
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+    opacity: 0;
+    @include delayed-transition-timed(all,1s,0.15s);
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    img {
+      opacity: 0.04;
+    }
+  }
+}

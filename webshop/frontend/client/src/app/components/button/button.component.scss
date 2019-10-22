@@ -1,0 +1,43 @@
+/* Author: mk303 */
+@import "~src/assets/styles/colors";
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/transitions";
+
+button {
+  opacity: 0.75;
+  background: rgba($primary-blue, 0.1);
+  border: 1px solid $primary-blue;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.50);
+  font-family: "Roboto Bold";
+  font-size: 14px;
+  line-height: 14px;
+  color: $primary-blue;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  width: auto;
+  padding: 12px 40px;
+  cursor: pointer;
+
+  &:hover {
+    @include custom-transition($transition-quick);
+    background: rgba($primary-blue, 0.3);
+  }
+}
+
+:host-context(.description) {
+
+  button {
+    margin-top: 30px;
+  }
+
+}
+
+:host-context(.full_width) {
+
+  button {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+}

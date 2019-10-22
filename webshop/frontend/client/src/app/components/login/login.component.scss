@@ -1,0 +1,53 @@
+/* Author: mk303, jm114 */
+@import "~src/assets/styles/overlay";
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/login_logout";
+@import "~src/assets/styles/wrappers";
+
+#loginForm {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-row-gap: 15px;
+
+  ::ng-deep button {
+    width: 100% !important;
+    margin-top: 25px;
+  }
+}
+
+h2 {
+  margin-bottom: 60px;
+}
+
+.input {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid $medium-grey;
+  position: relative;
+
+  &:before, &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    background: $medium-grey;
+  }
+
+  &:after {
+    left: initial;
+    right: 0;
+  }
+
+  input {
+    font-family: 'Exo Light';
+    font-size: 20px;
+    color: $text-color-white;
+    text-align: center;
+    line-height: 20px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+}

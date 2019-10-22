@@ -1,0 +1,78 @@
+db.home
+{
+	en: {
+		teaser: {
+			headline: "jfgrif"
+		},
+		description: {
+			headline: "jfgrif",
+			text: "flner",
+			button_text: "fovbero" 
+		},
+		slider: {
+			headline: "jfgrif",
+			text: "flner",
+		}
+	},
+	de: { 
+		...
+		},
+	images {
+		teaser: "../../kwfwrif.jpg",
+		description: "../../kwfwrif.jpg",
+	}
+}
+
+db.products-overview
+{
+	en: {
+		h1-text: {
+			headline: "jfgrif",
+			text: "flner",
+		}
+	},
+	de: { 
+		...
+		}
+}
+
+db.shopping-cart
+{
+	en: {
+		h2-text: {
+			headline: "jfgrif",
+			text: "flner",
+		},
+		order-overview: {
+			item: "ferfadwq",
+			amount: "fihref",
+			price: "riberg",
+			total_price: "fdiuhv ergeq",
+			delet_button_text: "erwpfwf",
+			buy_button_text: "ewofiwwf"
+		}
+	},
+	de: { 
+		...
+		},
+	images {
+		teaser-bg-images: "../../kwfwrif.jpg"
+	}
+}
+
+db.imprint
+{
+	en: {
+		h1-text: {
+			headline: "jfgrif",
+			text: "flner",
+		}
+	},
+	de: { 
+		...
+		}
+	},
+	images {
+		teaser-bg-images: "../../kwfwrif.jpg"
+	}
+}

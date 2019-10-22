@@ -1,0 +1,28 @@
+/* Author: mk303 */
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/colors";
+
+input.number {
+  background: transparent;
+  width: auto;
+  display: inline-block;
+  padding: 10px;
+  border-bottom: 1px solid $text-color;
+  color: $text-color-white;
+  font-family: "Exo Bold";
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
+  text-align: right;
+}
+
+input.number::-webkit-inner-spin-button,
+input.number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.number:before {
+  content: 'km';
+  display: inline-block;
+}

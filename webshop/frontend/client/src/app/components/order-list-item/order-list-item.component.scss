@@ -1,0 +1,89 @@
+/* Author: mk303 */
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/transitions";
+@import "~src/assets/styles/input";
+
+div {
+  display: grid;
+  grid-template-columns: 6fr 2fr 2fr;
+
+  span {
+    align-self: center;
+    font-size: 16px;
+    line-height: 26px;
+    color: $text-color-white;
+    font-family: "Exo Bold";
+    align-items: center;
+
+    &:last-child {
+      text-align: right;
+    }
+
+    &.userInputNumber {
+      display: inline-flex;
+    }
+  }
+}
+
+.title {
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 10px;
+}
+
+.product_info {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  grid-column-gap: 40px;
+
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content auto;
+  }
+}
+
+.delete {
+  font-family: 'Roboto Bold';
+  background: transparent;
+  border: none;
+  color: $secondary-red;
+  display: inline-block;
+  width: max-content;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.75;
+  cursor: pointer ;
+  @include custom-transition($transition-quick);
+  align-self: center;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("~src/assets/images/delete.svg");
+    background-size: cover;
+    margin: 0 8px -4px 0;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+span {
+  width: 100%;
+}
+
+input.number {
+  width: 100%;
+  padding-bottom: 0px;
+}

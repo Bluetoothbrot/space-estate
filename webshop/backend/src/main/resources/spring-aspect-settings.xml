@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+    <aop:aspectj-autoproxy/>
+
+    <bean id="planetController" class="com.mi4stw.astrospaceestate.mappingcontrollers.UserController"/>
+
+    <!-- Aspect -->
+    <bean id="logAspect" class="com.mi4stw.astrospaceestate.aspect.LoggingInterceptor"/>
+
+    <aop:config>
+
+        <aop:aspect id="aspectLogging" ref="logAspect">
+
+            <!-- @Around -->
+            <aop:pointcut id="pointCutAround" expression="execution(* com.mi4stw.astrospaceestate.mappingcontrollers.UserController.*(..)) **and** this(email,password))"/>
+
+            <aop:around method="logAround" pointcut-ref="pointCutAround"/>
+
+        </aop:aspect>
+
+    </aop:config>
+
+
+</beans>

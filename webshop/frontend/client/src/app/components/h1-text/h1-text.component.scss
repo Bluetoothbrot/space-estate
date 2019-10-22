@@ -1,0 +1,12 @@
+/* Author: mk303 */
+@import "~src/assets/styles/wrappers";
+@import "~src/assets/styles/text";
+
+div {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  p {
+    text-align: justify;
+  }
+}

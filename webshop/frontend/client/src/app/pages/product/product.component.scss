@@ -1,0 +1,105 @@
+/* Author: mk303 */
+@import "~src/assets/styles/global";
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/input";
+@import "~src/assets/styles/colors";
+@import "~src/assets/styles/transitions";
+
+#product_detail {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$footer-height});
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+
+  @media screen and (max-width: 1080px) {
+
+    #product_detail {
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+}
+
+.product_description {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  padding-left: 110px;
+  padding-right: 100px;
+  text-shadow: 0 0 10px #000;
+  margin-top: 25%;
+
+  p {
+    color: $text-color-white;
+    font-family: "Roboto Bold";
+    max-width: 500px;
+  }
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+  background: rgba(0,0,0,0.65);
+  display: grid;
+
+  div {
+    align-self: center;
+
+    h2 {
+      text-align: left;
+    }
+
+    dl {
+      width: 100%;
+      display: grid;
+      grid-template-columns: max-content auto;
+      grid-column-gap: 20px;
+      grid-row-gap: 10px;
+      align-items: center;
+
+      &>* {
+        display: inline-block;
+        font-family: 'Roboto Light';
+        font-size: 16px;
+        color: $text-color;
+        line-height: 26px;
+        max-width: max-content;
+      }
+
+      dd {
+        font-family: 'Exo Bold';
+        text-align: right;
+        color: $text-color-white;
+        justify-self: end;
+      }
+
+      dd.price {
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      dd.sold_out {
+        color: $secondary-red;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 30px;
+        letter-spacing: 3px;
+      }
+
+      dd.hidden {
+        display: none;
+      }
+
+      dd input.number {
+        padding: 0;
+        margin-right: 6px;
+      }
+    }
+  }
+}

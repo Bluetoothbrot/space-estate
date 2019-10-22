@@ -1,0 +1,20 @@
+<!-- Author: mk303 -->
+<div *ngIf="data != null && currentCurrency != null && currentLanguage != null">
+  <div class="product_info">
+    <a routerLink="/product/{{data.simpleName}}"><img src="{{data.image}}"></a>
+    <div>
+      <a routerLink="/product/{{data.simpleName}}"><h3 class="title">{{data.name}}</h3></a>
+      <p>{{data.priceSquareKm | currency : currentCurrency.code : 'symbol' : '1.2-2' : currentLanguage.langCode}} / km²</p>
+      <button class="delete" (click)="deleteCartItem(data.simpleName)">{{staticStrings.SHOPPING_CART_ITEM_DELETE_BUTTON}}</button>
+    </div>
+  </div>
+  <span class="userInputNumber">
+    <input class="number" type="number" placeholder="0"
+           #amountToAddToCart
+           [(ngModel)]="currentItemAmount"
+           (change)="updateCartItem(data.simpleName)"
+           (focus)="this.currentItemAmountBeforeChange = amountToAddToCart.value"
+           numbersOnlyDirective/>
+    km²</span>
+  <span>{{data.totalPrice | currency : currentCurrency.code : 'symbol' : '1.2-2' : currentLanguage.langCode}}</span>
+</div>

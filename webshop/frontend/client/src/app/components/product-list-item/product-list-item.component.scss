@@ -1,0 +1,136 @@
+/* Author: mk303, jm114 */
+@import "~src/assets/styles/text";
+@import "~src/assets/styles/transitions";
+
+$container_padding: 50px;
+
+.item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    @include custom-transition($transition-quick);
+  }
+
+  &:hover {
+
+    .hover_overlay {
+      opacity: 1;
+      text-shadow: 0 0 20px #000;
+    }
+
+    h1 {
+      opacity: 1;
+    }
+
+    span {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }
+
+    img {
+      filter: grayscale(100%) brightness(50%);
+      transform: scale(1.1);
+    }
+  }
+}
+
+:host-context(.flipped) {
+
+  .container {
+    left: 20px;
+    padding-left: 50px;
+
+    h1 {
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    span {
+      text-align: left;
+      left: $container_padding;
+    }
+  }
+
+  img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+
+  .item:hover {
+    img {
+      transform: scale(-1.1,1.1);
+    }
+  }
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  z-index: 300;
+  padding-right: $container_padding;
+  text-shadow: 0 0 10px #383838;
+  @include custom-transition($transition-quick);
+
+  h1 {
+    text-align: right;
+    margin-bottom: 10px;
+    @include custom-transition($transition-quick);
+  }
+
+  p {
+    text-align: right;
+    color: $text-color-white;
+    font-family: "Roboto Bold";
+  }
+
+  span {
+    display: inline-block;
+    font-family: "Roboto Bold";
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    margin-right: -5px;
+    text-align: right;
+    text-transform: uppercase;
+    position: absolute;
+    top: calc(100% + 40px);
+    right: $container_padding;
+    color: $primary-blue;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    @include custom-transition($transition-quick-delayed);
+  }
+}
+
+.hover_overlay {
+  display: inline-block;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border: 1px solid $primary-blue;
+  background: rgba($primary-blue, 0.3);
+  @include custom-transition($transition-quick);
+}

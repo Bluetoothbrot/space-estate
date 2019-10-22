@@ -1,0 +1,21 @@
+/* Author: mk303 */
+@import "~src/assets/styles/shadows";
+@import "~src/assets/styles/transitions";
+@import "~src/assets/styles/colors";
+
+.header-icon {
+  text-align: center;
+  position: relative;
+
+  svg {
+    width: 34px;
+    cursor: pointer;
+    filter: drop-shadow($nav-icon-shadow);
+    @include custom-transition($transition-quick);
+    fill: $text-color-white;
+
+    &:hover {
+      fill: $primary-blue;
+    }
+  }
+}

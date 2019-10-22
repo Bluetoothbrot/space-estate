@@ -1,0 +1,24 @@
+<!-- Author: mk303 -->
+<div *ngIf="currentPlanet != null && planetInfo_4 != null" id="product_detail" class="flipped" [ngStyle]="{ 'background-image': 'url(' + currentPlanet.image + ')'}">
+  <div class="product_description">
+    <h1 class="title">{{currentPlanet.name}}</h1>
+    <p>{{currentPlanet.description}}</p>
+  </div>
+  <div class="form">
+    <div>
+      <h2>{{planetInfo_4.headline}} {{currentPlanet.name}}</h2>
+      <form *ngIf="planetInfo_4 != null && currentCurrency != null && currentPlanet != null && currentLanguage != null" (ngSubmit)="onSubmit(amountToAddToCart.value)">
+        <dl>
+          <dt>{{planetInfo_4.priceSquareKm}}</dt>
+          <dd class="price">{{currentPlanet.priceSquareKm | currency : currentCurrency.code : 'symbol' : '1.2-2' : currentLanguage.langCode}}</dd>
+          <dt>{{planetInfo_4.availableSizeSquareKm}}</dt>
+          <dd>{{maxAvailableAmount}} / {{currentPlanet.totalSize}} km²</dd>
+          <dt>{{planetInfo_4.amount}}</dt>
+          <dd [class.hidden]="maxAvailableAmount <= 0"><input [(ngModel)]="currentAmountToAddToCart" [ngModelOptions]="{standalone: true}" class="number" #amountToAddToCart placeholder="0" numbersOnlyDirective/> km²</dd>
+          <dd *ngIf="maxAvailableAmount <= 0" class="sold_out">{{planetInfo_4.soldOut}}</dd>
+        </dl>
+        <app-button *ngIf="maxAvailableAmount > 0" type="submit" class="full_width" [buttonText]="planetInfo_4.button"></app-button>
+      </form>
+    </div>
+  </div>
+</div>

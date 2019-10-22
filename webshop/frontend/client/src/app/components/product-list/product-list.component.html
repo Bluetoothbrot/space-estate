@@ -1,0 +1,4 @@
+<!-- Author: mk303, jm114 -->
+<div *ngIf="planets != null">
+  <app-product-list-item *ngFor="let planet of planets index as i; even as isEven" [class.flipped]="isEven" [planet]="planet"></app-product-list-item>
+</div>
